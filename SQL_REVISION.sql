@@ -81,5 +81,28 @@ SELECT employee_id,first_name,salary+(salary * commission_pct) 'SALARY'
 FROM employees
 WHERE commission_pct IS NOT NULL
 
+SELECT employee_id,first_name,salary+(salary * commission_pct) 'SALARY'
+FROM employees
 
-SELECT * FROM employees
+
+SELECT *
+FROM employees
+
+SELECT *
+FROM departments
+--Emp Id , Name , Salary, Deparment Name
+SELECT E.employee_id  'Emp Id',E.first_name 'Name',salary,d.department_name 'Deparment Name'
+FROM employees e
+INNER JOIN departments d
+ON e.department_id = d.department_id
+ORDER BY E.salary
+
+
+
+
+SELECT E.employee_id  'Emp Id',E.first_name 'Name',salary,d.department_name 'Deparment Name'
+FROM employees e
+INNER JOIN departments d
+ON e.department_id = d.department_id
+WHERE D.department_name = 'Executive'
+ORDER BY E.salary
