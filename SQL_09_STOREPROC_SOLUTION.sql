@@ -41,6 +41,9 @@ SELECT * FROM MENU
 INSERT INTO MENU VALUES ('FRIED RICE',230,2),('Crispy Calamari Rings',150,2)
 ,('ZINGER BURGER',350,3),('BROAST',250,3),('Butterfly Prawns',250,4),('Chicken Egg Vegetable Rolls',900,2)
 
+
+
+
 CREATE VIEW MENU_VW
 AS
 SELECT M.ID,M.FOODNAME,M.PRICE,F.FOODCAT FROM MENU m
@@ -50,8 +53,29 @@ ON M.FOODID = F.ID
 SELECT * FROM MENU_VW
 
 --Create Store Procedure that Add New Food Type --spAddFoodType
+SELECT * FROM FOODTYPE
+CREATE PROC spAddFoodType
+@FOODCAT VARCHAR(150)
+AS
+BEGIN
+INSERT INTO FOODTYPE VALUES(@FOODCAT)
+END
+spAddFoodType 'THAI'
+
+
 --Create Store Procedure that Update Food Type Name --spUpdateFoodName
+SELECT * FROM FOODTYPE
+CREATE PROC spUpdateFoodName
+@ID INT,
+@FOODNAME VARCHAR(150)
+AS
+BEGIN
+UPDATE FOODTYPE SET FOODCAT = @FOODNAME WHERE ID =@ID
+END
+spUpdateFoodName 1,'CONTINENTAL'
+
 --Create Store Procedure that Add New Menu Item Food Type And Price --spAddMenuItem
+SELECT * FROM MENU
 --Create Store Procedure that Update Food Price --spUpdatePrice
 --Create Store Procedure that Add Customer
 --Create Store Produce that Add New Order of Customer
