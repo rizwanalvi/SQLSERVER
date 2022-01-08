@@ -83,3 +83,10 @@ SELECT * FROM MENU
 --Create Store Procedure that Add New FoodType and Menu Item at once
 --Create Store Procedure that Add Customer and Order at once
 --Create Store Procedure that show orders of Customer and there quantity with rates
+
+
+SELECT F.FOODCAT, COUNT(F.FOODCAT) 'NUMBER OF DISHES' FROM MENU m
+INNER JOIN FOODTYPE f
+ON M.FOODID = F.ID
+GROUP BY F.FOODCAT
+
