@@ -1,0 +1,30 @@
+--CREATE DATABASE TABLE
+	--FOODTYPE (ID,FOODTYPE)
+	--MENU(ID,FOODNAME,PRICE,FOODTYPE)
+--INSERT DATA IN TABLES
+	-- FOODTYPE
+		--CONTINENTIAL
+		--CHINES
+		--FASTFOOD
+		--MEXICAN FOOD
+	--MENU
+		--FRIED RICE-230
+		--Crispy Calamari Rings-150
+		--ZINGER BURGER-350
+		--BROAST-250
+		--Chicken with Chestnuts-560
+		--Butterfly Prawns-250
+		--Chicken Egg Vegetable Rolls-900
+		--Spicy Schezwan Chicken-450
+		--
+
+--Create Store Procedure that Add New Food Type --spAddFoodType
+--Create Store Procedure that Update Food Type Name --spUpdateFoodName
+--Create Store Procedure that Add New Menu Item Food Type And Price --spAddMenuItem
+--Create Store Procedure that Update Food Price --spUpdatePrice
+--Create Store Procedure that Add Customer
+--Create Store Produce that Add New Order of Customer
+--Complex Store Procedures---
+--Create Store Procedure that Add New FoodType and Menu Item at once
+--Create Store Procedure that Add Customer and Order at once
+--Create Store Procedure that show orders of Customer and there quantity with rates
